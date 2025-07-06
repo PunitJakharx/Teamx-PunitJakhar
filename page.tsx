@@ -1,21 +1,28 @@
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 p-4 md:p-8">
-      <section className="text-center py-10">
-        <h1 className="text-4xl md:text-6xl font-bold text-blue-700">TeamX PunitJakhar</h1>
-        <p className="mt-4 text-lg md:text-xl max-w-xl mx-auto">
-          Strategic Trading. Strong Mindset. Long-Term Success.
-        </p>
-        <div className="mt-6 space-x-4">
-          <a href="#mentorship" className="bg-blue-600 text-white px-6 py-2 rounded-2xl shadow hover:bg-blue-700 transition">
-            Mentorship
-          </a>
-          <a href="#premium" className="bg-green-600 text-white px-6 py-2 rounded-2xl shadow hover:bg-green-700 transition">
-            Buy PDF
-          </a>
-        </div>
-      </section>
-    </main>
+    <div style={{ padding: '2rem', textAlign: 'center' }}>
+      <Image 
+        src="/punit.jpg" 
+        alt="Punit Jakhar" 
+        width={200} 
+        height={200} 
+        style={{ borderRadius: '50%' }}
+      />
+      <h1>Punit Jakhar</h1>
+      <p>
+        Hello, I'm <strong>Punit Jakhar</strong> — a trading mentor and Excel professional from Churu, Rajasthan.
+        I have over 5 years of experience in trading, focusing especially on gold and silver options with a swing trading approach.
+        I also bring 3+ years of experience as an MIS Executive and Scheduling Manager with expertise in Excel, Google Sheets, and Power BI.
+      </p>
+      <p>
+        This website is a platform to deliver:<br />
+        📘 Trading Strategy PDFs<br />
+        💹 Market Signals<br />
+        🧠 Mindset Mentorship for Traders<br />
+        💬 Access to my private Telegram Community: <strong>TeamX PunitJakhar</strong>
+      </p>
+    </div>
   );
 }
