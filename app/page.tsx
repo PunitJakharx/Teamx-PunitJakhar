@@ -1,79 +1,89 @@
+// app/page.tsx (Next.js 13+ with app directory)
 
 import Image from 'next/image';
 
-export default function Home() { return ( <div className="min-h-screen bg-white text-gray-800 font-sans"> {/* Header */} <header className="border-b shadow-sm"> <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between"> <h1 className="text-3xl font-bold text-indigo-700">TeamX | PunitJakhar</h1> <nav className="mt-4 md:mt-0 space-x-4 text-sm text-indigo-600 font-medium"> <a href="#home">Home</a> <a href="#courses">Courses</a> <a href="#community">Community</a> <a href="#mentorship">Mentorship</a> <a href="#contact">Contact</a> </nav> </div> </header>
+export default function Home() {
+  return (
+    <main className="min-h-screen px-4 py-6 max-w-4xl mx-auto font-sans text-gray-900">
+      <header className="mb-8">
+        <h1 className="text-3xl md:text-4xl font-bold mb-2">TeamX | PunitJakhar</h1>
+        <nav className="flex flex-wrap gap-4 text-blue-600 text-lg mt-2">
+          <a href="#">Home</a>
+          <a href="#">Courses</a>
+          <a href="#">Community</a>
+          <a href="#">Mentorship</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
 
-{/* Hero Section */}
-  <section className="text-center py-12 bg-gray-50 px-4" id="home">
-    <h2 className="text-3xl md:text-4xl font-bold mb-4">Trade Like a Yogi — Free from Fear, Greed, and Hope</h2>
-    <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-      Master equity, commodities, forex, and options — with clarity, confidence, and real strategies.
-    </p>
-    <div className="flex justify-center gap-4 mb-6">
-      <button className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Join Telegram</button>
-      <button className="border border-indigo-600 text-indigo-600 px-4 py-2 rounded hover:bg-indigo-50 transition">Start Learning</button>
-    </div>
-    <div className="flex justify-center">
-      <Image
-        src="/punit.jpg.jpeg"
-        alt="Punit Jakhar"
-        width={200}
-        height={200}
-        className="rounded-full shadow-lg border-4 border-indigo-500 object-cover"
-      />
-    </div>
-  </section>
-
-  {/* About Mentor */}
-  <section className="px-4 py-12 max-w-3xl mx-auto text-center">
-    <h3 className="text-2xl font-bold mb-4">Meet Your Mentor</h3>
-    <p className="text-gray-700">
-      I’m <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience. I help aspiring traders master mindset,
-      structure, and clarity — not just strategies.
-    </p>
-  </section>
-
-  {/* Curriculum */}
-  <section className="bg-gray-100 py-12 px-4" id="courses">
-    <div className="max-w-4xl mx-auto">
-      <h3 className="text-2xl font-bold text-center mb-6">What You’ll Learn</h3>
-      <div className="grid md:grid-cols-3 gap-6">
-        <div>
-          <h4 className="font-semibold text-lg mb-2">Beginner</h4>
-          <ul className="list-disc list-inside text-sm text-gray-700">
-            <li>Candlestick Basics</li>
-            <li>Chart Types</li>
-            <li>Trade Types</li>
-            <li>Risk Management</li>
-          </ul>
+      <section className="mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">
+          Trade Like a Yogi — Free from Fear, Greed, and Hope
+        </h2>
+        <p className="text-lg mb-4">
+          Master equity, commodities, forex, and options — with clarity, confidence, and real strategies.
+        </p>
+        <div className="flex gap-4 mb-6">
+          <button className="bg-blue-600 text-white px-4 py-2 rounded">Join Telegram</button>
+          <button className="bg-gray-200 px-4 py-2 rounded">Start Learning</button>
         </div>
-        <div>
-          <h4 className="font-semibold text-lg mb-2">Intermediate</h4>
-          <ul className="list-disc list-inside text-sm text-gray-700">
-            <li>Technical Indicators</li>
-            <li>Entry/Exit Rules</li>
-            <li>Chart Patterns</li>
-            <li>Risk-Reward Concepts</li>
-          </ul>
+
+        <div className="flex flex-col md:flex-row gap-6 items-center">
+          <div className="w-full md:w-1/2">
+            <Image
+              src="/punit.jpg" // Make sure file name matches exactly
+              width={400}
+              height={400}
+              alt="Punit Jakhar"
+              className="rounded-xl shadow-md object-cover"
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <h3 className="text-xl font-semibold mb-2">Meet Your Mentor</h3>
+            <p>
+              I’m <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience.
+              I help aspiring traders master mindset, structure, and clarity — not just strategies.
+            </p>
+          </div>
         </div>
-        <div>
-          <h4 className="font-semibold text-lg mb-2">Advanced</h4>
-          <ul className="list-disc list-inside text-sm text-gray-700">
-            <li>Time & Trade Management</li>
-            <li>Money Management</li>
-            <li>Trading Psychology</li>
-            <li>Live Trading Strategies</li>
-          </ul>
+      </section>
+
+      <section className="mb-12">
+        <h3 className="text-2xl font-bold mb-4">What You’ll Learn</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-base">
+          <div>
+            <h4 className="font-semibold text-lg mb-2">Beginner</h4>
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Candlestick Basics</li>
+              <li>Chart Types</li>
+              <li>Trade Types</li>
+              <li>Risk Management</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold text-lg mb-2">Intermediate</h4>
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Technical Indicators</li>
+              <li>Entry/Exit Rules</li>
+              <li>Chart Patterns</li>
+              <li>Risk-Reward Concepts</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold text-lg mb-2">Advanced</h4>
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Trading Psychology</li>
+              <li>Time Management</li>
+              <li>Money Management</li>
+              <li>Live Trading Strategies</li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  {/* Footer */}
-  <footer className="text-center text-sm text-gray-500 py-8 border-t mt-12">
-    © 2025 TeamX | PunitJakhar. All rights reserved.
-  </footer>
-</div>
-
-); }
-
+      <footer className="border-t pt-4 text-center text-sm text-gray-500">
+        © 2025 TeamX | Punit Jakhar. All rights reserved.
+      </footer>
+    </main>
+  );
+}
