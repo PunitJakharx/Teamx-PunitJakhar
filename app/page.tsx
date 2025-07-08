@@ -3,31 +3,87 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div style={{ fontFamily: 'Segoe UI, sans-serif', padding: '20px', backgroundColor: '#f9f9f9' }}>
-      <header style={{ backgroundColor: '#001f3f', padding: '20px', color: 'white', textAlign: 'center' }}>
-        <h1 style={{ margin: 0 }}>TeamX | PunitJakhar</h1>
-        <nav style={{ marginTop: '10px' }}>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Home</a>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Courses</a>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Community</a>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Mentorship</a>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Contact</a>
+    <div style={{ fontFamily: 'Segoe UI, sans-serif', backgroundColor: '#f4f6f8', color: '#333' }}>
+      {/* Header */}
+      <header style={{
+        backgroundColor: '#001f3f',
+        padding: '25px 15px',
+        color: 'white',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
+      }}>
+        <h1 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: 'bold' }}>
+          TeamX | PunitJakhar
+        </h1>
+        <nav style={{ textAlign: 'center', marginTop: '10px' }}>
+          {['Home', 'Courses', 'Community', 'Mentorship', 'Contact'].map((item) => (
+            <a
+              key={item}
+              href="#"
+              style={{
+                color: '#00cfff',
+                margin: '0 15px',
+                textDecoration: 'none',
+                fontWeight: '500'
+              }}
+            >
+              {item}
+            </a>
+          ))}
         </nav>
       </header>
 
-      <section style={{ textAlign: 'center', marginTop: '40px' }}>
-        <h2 style={{ fontSize: '1.8rem', color: '#003366' }}>
+      {/* Hero Section */}
+      <section style={{
+        textAlign: 'center',
+        padding: '50px 20px',
+        backgroundColor: '#fff'
+      }}>
+        <h2 style={{
+          fontSize: '1.8rem',
+          color: '#003366',
+          fontWeight: '700'
+        }}>
           Trade Like a Yogi — Free from Fear, Greed, and Hope
         </h2>
-        <p style={{ maxWidth: '600px', margin: '0 auto' }}>
+        <p style={{
+          maxWidth: '650px',
+          margin: '15px auto 30px',
+          fontSize: '16px',
+          lineHeight: '1.6',
+          color: '#555'
+        }}>
           Master equity, commodities, forex, and options — with clarity, confidence, and real strategies.
         </p>
 
-        <div style={{ margin: '20px' }}>
-          <button style={{ padding: '10px 20px', margin: '0 10px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}>
+        <div style={{ marginBottom: '30px' }}>
+          <button style={{
+            padding: '12px 24px',
+            margin: '0 10px',
+            backgroundColor: '#007bff',
+            color: 'white',
+            border: 'none',
+            borderRadius: '6px',
+            cursor: 'pointer',
+            transition: 'background 0.3s ease'
+          }}
+            onMouseOver={e => e.currentTarget.style.backgroundColor = '#0056b3'}
+            onMouseOut={e => e.currentTarget.style.backgroundColor = '#007bff'}
+          >
             Join Telegram
           </button>
-          <button style={{ padding: '10px 20px', margin: '0 10px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '5px' }}>
+          <button style={{
+            padding: '12px 24px',
+            margin: '0 10px',
+            backgroundColor: '#28a745',
+            color: 'white',
+            border: 'none',
+            borderRadius: '6px',
+            cursor: 'pointer',
+            transition: 'background 0.3s ease'
+          }}
+            onMouseOver={e => e.currentTarget.style.backgroundColor = '#1c7430'}
+            onMouseOut={e => e.currentTarget.style.backgroundColor = '#28a745'}
+          >
             Start Learning
           </button>
         </div>
@@ -35,47 +91,76 @@ export default function Home() {
         <Image
           src="/punit.jpg.jpeg"
           alt="Punit Jakhar"
-          width={180}
-          height={240}
-          style={{ borderRadius: '10px', marginTop: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
+          width={220}
+          height={300}
+          style={{
+            borderRadius: '12px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            maxWidth: '90%'
+          }}
         />
       </section>
 
-      <section style={{ maxWidth: '800px', margin: '40px auto' }}>
-        <h2>Meet Your Mentor</h2>
-        <p>
+      {/* About Section */}
+      <section style={{
+        maxWidth: '900px',
+        margin: '40px auto',
+        backgroundColor: '#ffffff',
+        padding: '30px',
+        borderRadius: '12px',
+        boxShadow: '0 0 10px rgba(0,0,0,0.1)'
+      }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Meet Your Mentor</h2>
+        <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
           I'm <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience.
           I help aspiring traders master mindset, structure, and clarity — not just strategies.
         </p>
-
-        <h2>What You’ll Learn</h2>
-        <h3>Beginner</h3>
-        <ul>
-          <li>Candlestick Basics</li>
-          <li>Chart Types</li>
-          <li>Trade Types</li>
-          <li>Risk Management</li>
-        </ul>
-
-        <h3>Intermediate</h3>
-        <ul>
-          <li>Technical Indicators</li>
-          <li>Entry/Exit Rules</li>
-          <li>Chart Patterns</li>
-          <li>Risk-Reward Concepts</li>
-        </ul>
-
-        <h3>Advanced</h3>
-        <ul>
-          <li>Trading Psychology</li>
-          <li>Time Management</li>
-          <li>Money Management</li>
-          <li>Live Trading Strategies</li>
-        </ul>
       </section>
 
-      <footer style={{ textAlign: 'center', padding: '20px', fontSize: '14px', color: '#555' }}>
-        © 2025 TeamX by Punit Jakhar — All rights reserved.
+      {/* Learn Section */}
+      <section style={{
+        maxWidth: '900px',
+        margin: '30px auto',
+        backgroundColor: '#ffffff',
+        padding: '30px',
+        borderRadius: '12px',
+        boxShadow: '0 0 10px rgba(0,0,0,0.05)'
+      }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>What You’ll Learn</h2>
+
+        {[
+          {
+            level: 'Beginner',
+            items: ['Candlestick Basics', 'Chart Types', 'Trade Types', 'Risk Management']
+          },
+          {
+            level: 'Intermediate',
+            items: ['Technical Indicators', 'Entry/Exit Rules', 'Chart Patterns', 'Risk-Reward Concepts']
+          },
+          {
+            level: 'Advanced',
+            items: ['Trading Psychology', 'Time Management', 'Money Management', 'Live Trading Strategies']
+          }
+        ].map((section) => (
+          <div key={section.level} style={{ marginBottom: '20px' }}>
+            <h3 style={{ fontSize: '1.2rem', color: '#0056b3' }}>{section.level}</h3>
+            <ul style={{ paddingLeft: '20px', color: '#555', marginTop: '8px' }}>
+              {section.items.map(item => <li key={item} style={{ marginBottom: '5px' }}>{item}</li>)}
+            </ul>
+          </div>
+        ))}
+      </section>
+
+      {/* Footer */}
+      <footer style={{
+        textAlign: 'center',
+        padding: '25px',
+        fontSize: '14px',
+        color: '#666',
+        backgroundColor: '#f0f0f0',
+        marginTop: '50px'
+      }}>
+        © {new Date().getFullYear()} TeamX by Punit Jakhar — All rights reserved.
       </footer>
     </div>
   );
