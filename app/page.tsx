@@ -1,82 +1,78 @@
-// pages/index.tsx
-import Image from 'next/image';
+import Image from 'next/image'; import Link from 'next/link';
 
-export default function Home() {
-  return (
-    <div style={{ fontFamily: 'Segoe UI, sans-serif', padding: '20px', backgroundColor: '#f9f9f9' }}>
-      <header style={{ backgroundColor: '#001f3f', padding: '20px', color: 'white', textAlign: 'center' }}>
-        <h1 style={{ margin: 0 }}>TeamX | PunitJakhar</h1>
-        <nav style={{ marginTop: '10px' }}>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Home</a>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Courses</a>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Community</a>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Mentorship</a>
-          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Contact</a>
-        </nav>
-      </header>
+export default function HomePage() { return ( <div className="min-h-screen bg-gray-50 text-gray-900 font-sans"> <header className="bg-blue-900 text-white py-6 px-4 shadow-md"> <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center"> <h1 className="text-3xl font-extrabold mb-2 sm:mb-0">TeamX | PunitJakhar</h1> <nav className="space-x-4 text-lg"> <Link href="#home" className="hover:text-blue-300">Home</Link> <Link href="#courses" className="hover:text-blue-300">Courses</Link> <Link href="#community" className="hover:text-blue-300">Community</Link> <Link href="#mentorship" className="hover:text-blue-300">Mentorship</Link> <Link href="#contact" className="hover:text-blue-300">Contact</Link> </nav> </div> </header>
 
-      <section style={{ textAlign: 'center', marginTop: '40px' }}>
-        <h2 style={{ fontSize: '1.8rem', color: '#003366' }}>
-          Trade Like a Yogi — Free from Fear, Greed, and Hope
-        </h2>
-        <p style={{ maxWidth: '600px', margin: '0 auto' }}>
-          Master equity, commodities, forex, and options — with clarity, confidence, and real strategies.
-        </p>
+<main className="max-w-4xl mx-auto px-4 py-10">
+    <section className="text-center mb-10">
+      <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
+        Trade Like a Yogi — Free from Fear, Greed, and Hope
+      </h2>
+      <p className="text-lg text-gray-700 max-w-xl mx-auto mb-6">
+        Master equity, commodities, forex, and options — with clarity, confidence, and real strategies.
+      </p>
+      <div className="flex justify-center gap-4">
+        <a href="#" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow">Join Telegram</a>
+        <a href="#" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg shadow">Start Learning</a>
+      </div>
+    </section>
 
-        <div style={{ margin: '20px' }}>
-          <button style={{ padding: '10px 20px', margin: '0 10px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}>
-            Join Telegram
-          </button>
-          <button style={{ padding: '10px 20px', margin: '0 10px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '5px' }}>
-            Start Learning
-          </button>
-        </div>
+    <section className="flex flex-col items-center text-center mb-12">
+      <Image
+        src="/punit.jpg.jpeg"
+        alt="Punit Jakhar"
+        width={300}
+        height={400}
+        className="rounded-lg shadow-md"
+      />
+    </section>
 
-        <Image
-          src="/punit.jpg.jpeg"
-          alt="Punit Jakhar"
-          width={180}
-          height={240}
-          style={{ borderRadius: '10px', marginTop: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
-        />
-      </section>
+    <section className="mb-12">
+      <h3 className="text-2xl font-bold mb-2">Meet Your Mentor</h3>
+      <p className="text-gray-700">
+        I&apos;m <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience. I help aspiring traders master
+        mindset, structure, and clarity — not just strategies.
+      </p>
+    </section>
 
-      <section style={{ maxWidth: '800px', margin: '40px auto' }}>
-        <h2>Meet Your Mentor</h2>
-        <p>
-          I'm <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience.
-          I help aspiring traders master mindset, structure, and clarity — not just strategies.
-        </p>
+    <section className="mb-10">
+      <h3 className="text-2xl font-bold mb-4">What You’ll Learn</h3>
 
-        <h2>What You’ll Learn</h2>
-        <h3>Beginner</h3>
-        <ul>
-          <li>Candlestick Basics</li>
-          <li>Chart Types</li>
-          <li>Trade Types</li>
-          <li>Risk Management</li>
+      <div className="mb-6">
+        <h4 className="text-xl font-semibold text-blue-800 mb-2">Beginner</h4>
+        <ul className="list-disc list-inside text-gray-700">
+          <li>📘 Candlestick Basics</li>
+          <li>📊 Chart Types</li>
+          <li>💹 Trade Types</li>
+          <li>🛡 Risk Management</li>
         </ul>
+      </div>
 
-        <h3>Intermediate</h3>
-        <ul>
-          <li>Technical Indicators</li>
-          <li>Entry/Exit Rules</li>
-          <li>Chart Patterns</li>
-          <li>Risk-Reward Concepts</li>
+      <div className="mb-6">
+        <h4 className="text-xl font-semibold text-blue-800 mb-2">Intermediate</h4>
+        <ul className="list-disc list-inside text-gray-700">
+          <li>📈 Technical Indicators</li>
+          <li>🚪 Entry/Exit Rules</li>
+          <li>🧩 Chart Patterns</li>
+          <li>⚖️ Risk-Reward Concepts</li>
         </ul>
+      </div>
 
-        <h3>Advanced</h3>
-        <ul>
-          <li>Trading Psychology</li>
-          <li>Time Management</li>
-          <li>Money Management</li>
-          <li>Live Trading Strategies</li>
+      <div>
+        <h4 className="text-xl font-semibold text-blue-800 mb-2">Advanced</h4>
+        <ul className="list-disc list-inside text-gray-700">
+          <li>🧠 Trading Psychology</li>
+          <li>⏱ Time Management</li>
+          <li>💰 Money Management</li>
+          <li>🎯 Live Trading Strategies</li>
         </ul>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <footer style={{ textAlign: 'center', padding: '20px', fontSize: '14px', color: '#555' }}>
-        © 2025 TeamX by Punit Jakhar — All rights reserved.
-      </footer>
-    </div>
-  );
-}
+  <footer className="bg-gray-100 text-center text-sm py-6 mt-10 text-gray-600">
+    © {new Date().getFullYear()} TeamX | Built by Punit Jakhar
+  </footer>
+</div>
+
+); }
+
