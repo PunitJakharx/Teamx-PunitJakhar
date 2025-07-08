@@ -1,9 +1,10 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-800 px-4 py-6 font-sans">
-      <header className="flex flex-col items-center md:flex-row md:justify-between mb-10">
-        <h1 className="text-3xl font-bold">TeamX | <span className="text-indigo-600">PunitJakhar</span></h1>
-        <nav className="space-x-4 mt-4 md:mt-0">
+    <main className="min-h-screen bg-white text-gray-800 font-sans">
+      {/* Header */}
+      <header className="p-6 border-b shadow-md">
+        <h1 className="text-3xl font-bold text-center">TeamX | PunitJakhar</h1>
+        <nav className="flex justify-center gap-6 mt-4 text-sm">
           <a href="#" className="hover:underline">Home</a>
           <a href="#" className="hover:underline">Courses</a>
           <a href="#" className="hover:underline">Community</a>
@@ -12,32 +13,48 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="text-center mb-10">
-        <h2 className="text-2xl md:text-4xl font-semibold mb-4">Trade Like a Yogi — <span className="text-green-600">Free from Fear, Greed, and Hope</span></h2>
-        <p className="max-w-xl mx-auto text-lg text-gray-700">
+      {/* Hero Section */}
+      <section className="text-center py-10 px-4">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          Trade Like a Yogi — Free from Fear, Greed, and Hope
+        </h2>
+        <p className="max-w-2xl mx-auto text-gray-600 mb-6">
           Master equity, commodities, forex, and options — with clarity, confidence, and real strategies.
         </p>
-        <div className="mt-6 space-x-4">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Join Telegram</button>
-          <button className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">Start Learning</button>
+        <div className="flex justify-center gap-4 mb-6">
+          <a href="#" className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">
+            Join Telegram
+          </a>
+          <a href="#" className="border border-indigo-600 text-indigo-600 px-4 py-2 rounded hover:bg-indigo-50 transition">
+            Start Learning
+          </a>
+        </div>
+
+        {/* Mentor Image */}
+        <img 
+          src="/punit.jpg.jpeg" 
+          alt="Punit Jakhar" 
+          className="rounded-full w-28 h-28 mx-auto mb-4 border-2 border-indigo-500 object-cover shadow-md" 
+        />
+
+        {/* Mentor Intro */}
+        <div className="text-center">
+          <h3 className="text-xl font-bold mb-2">Meet Your Mentor</h3>
+          <p className="max-w-xl mx-auto text-gray-700">
+            I’m <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience. I help aspiring traders master mindset, structure, and clarity — not just strategies.
+          </p>
         </div>
       </section>
 
-      <section className="text-center">
-        <img src="/punit.jpg.jpeg" alt="Punit Jakhar" className="rounded-full w-40 h-40 mx-auto mb-4 border-4 border-indigo-500 object-cover" />
-        <h3 className="text-xl font-bold mb-2">Meet Your Mentor</h3>
-        <p className="max-w-xl mx-auto text-gray-700">
-          I'm <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience. I help aspiring traders master mindset, structure, and clarity — not just strategies.
-        </p>
-      </section>
+      {/* Learning Content */}
+      <section className="px-6 py-10 bg-gray-50">
+        <h3 className="text-2xl font-bold text-center mb-8">What You’ll Learn</h3>
 
-      <section className="mt-10">
-        <h3 className="text-2xl font-semibold mb-4">What You’ll Learn</h3>
-
-        <div className="grid md:grid-cols-3 gap-6 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Beginner */}
           <div>
-            <h4 className="text-lg font-bold mb-2 text-indigo-600">Beginner</h4>
-            <ul className="list-disc pl-6 text-gray-700">
+            <h4 className="text-lg font-semibold mb-2">Beginner</h4>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
               <li>Candlestick Basics</li>
               <li>Chart Types</li>
               <li>Trade Types</li>
@@ -45,9 +62,10 @@ export default function Home() {
             </ul>
           </div>
 
+          {/* Intermediate */}
           <div>
-            <h4 className="text-lg font-bold mb-2 text-indigo-600">Intermediate</h4>
-            <ul className="list-disc pl-6 text-gray-700">
+            <h4 className="text-lg font-semibold mb-2">Intermediate</h4>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
               <li>Technical Indicators</li>
               <li>Entry/Exit Rules</li>
               <li>Chart Patterns</li>
@@ -55,17 +73,23 @@ export default function Home() {
             </ul>
           </div>
 
+          {/* Advanced */}
           <div>
-            <h4 className="text-lg font-bold mb-2 text-indigo-600">Advanced</h4>
-            <ul className="list-disc pl-6 text-gray-700">
+            <h4 className="text-lg font-semibold mb-2">Advanced</h4>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>Time & Trade Management</li>
+              <li>Money Management</li>
               <li>Trading Psychology</li>
-              <li>Time Management</li>
-              <li>Trade & Money Management</li>
               <li>Live Trading Strategies</li>
             </ul>
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 text-sm text-gray-500 border-t mt-10">
+        © 2025 TeamX | PunitJakhar. All rights reserved.
+      </footer>
     </main>
-  )
+  );
 }
