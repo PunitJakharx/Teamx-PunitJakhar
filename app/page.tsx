@@ -1,5 +1,6 @@
 // pages/index.tsx
 import Image from 'next/image';
+import styles from './Home.module.css'; // optional if you want CSS module
 
 export default function Home() {
   return (
@@ -65,10 +66,7 @@ export default function Home() {
             borderRadius: '6px',
             cursor: 'pointer',
             transition: 'background 0.3s ease'
-          }}
-            onMouseOver={e => e.currentTarget.style.backgroundColor = '#0056b3'}
-            onMouseOut={e => e.currentTarget.style.backgroundColor = '#007bff'}
-          >
+          }}>
             Join Telegram
           </button>
           <button style={{
@@ -80,25 +78,25 @@ export default function Home() {
             borderRadius: '6px',
             cursor: 'pointer',
             transition: 'background 0.3s ease'
-          }}
-            onMouseOver={e => e.currentTarget.style.backgroundColor = '#1c7430'}
-            onMouseOut={e => e.currentTarget.style.backgroundColor = '#28a745'}
-          >
+          }}>
             Start Learning
           </button>
         </div>
 
-        <Image
-          src="/punit.jpg.jpeg"
-          alt="Punit Jakhar"
-          width={220}
-          height={300}
-          style={{
-            borderRadius: '12px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-            maxWidth: '90%'
-          }}
-        />
+        {/* ✅ Fix here: use className, not style */}
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Image
+            src="/punit.jpg.jpeg"
+            alt="Punit Jakhar"
+            width={220}
+            height={300}
+            className="rounded-img"
+            style={{
+              borderRadius: '12px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+            }}
+          />
+        </div>
       </section>
 
       {/* About Section */}
