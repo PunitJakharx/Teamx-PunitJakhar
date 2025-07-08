@@ -1,154 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TeamX | PunitJakhar</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f8f9fa;
-      color: #222;
-    }
+// pages/index.tsx
+import Image from 'next/image';
 
-    header {
-      background-color: #001f3f;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
+export default function Home() {
+  return (
+    <div style={{ fontFamily: 'Segoe UI, sans-serif', padding: '20px', backgroundColor: '#f9f9f9' }}>
+      <header style={{ backgroundColor: '#001f3f', padding: '20px', color: 'white', textAlign: 'center' }}>
+        <h1 style={{ margin: 0 }}>TeamX | PunitJakhar</h1>
+        <nav style={{ marginTop: '10px' }}>
+          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Home</a>
+          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Courses</a>
+          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Community</a>
+          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Mentorship</a>
+          <a href="#" style={{ color: '#00cfff', margin: '0 10px' }}>Contact</a>
+        </nav>
+      </header>
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
+      <section style={{ textAlign: 'center', marginTop: '40px' }}>
+        <h2 style={{ fontSize: '1.8rem', color: '#003366' }}>
+          Trade Like a Yogi — Free from Fear, Greed, and Hope
+        </h2>
+        <p style={{ maxWidth: '600px', margin: '0 auto' }}>
+          Master equity, commodities, forex, and options — with clarity, confidence, and real strategies.
+        </p>
 
-    nav {
-      margin-top: 0.5rem;
-    }
+        <div style={{ margin: '20px' }}>
+          <button style={{ padding: '10px 20px', margin: '0 10px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}>
+            Join Telegram
+          </button>
+          <button style={{ padding: '10px 20px', margin: '0 10px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '5px' }}>
+            Start Learning
+          </button>
+        </div>
 
-    nav a {
-      color: #00cfff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+        <Image
+          src="/punit.jpg.jpeg"
+          alt="Punit Jakhar"
+          width={180}
+          height={240}
+          style={{ borderRadius: '10px', marginTop: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
+        />
+      </section>
 
-    .container {
-      padding: 1.5rem;
-      max-width: 800px;
-      margin: auto;
-    }
+      <section style={{ maxWidth: '800px', margin: '40px auto' }}>
+        <h2>Meet Your Mentor</h2>
+        <p>
+          I'm <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience.
+          I help aspiring traders master mindset, structure, and clarity — not just strategies.
+        </p>
 
-    h2 {
-      color: #003366;
-      margin-top: 2rem;
-    }
+        <h2>What You’ll Learn</h2>
+        <h3>Beginner</h3>
+        <ul>
+          <li>Candlestick Basics</li>
+          <li>Chart Types</li>
+          <li>Trade Types</li>
+          <li>Risk Management</li>
+        </ul>
 
-    .hero {
-      text-align: center;
-      margin: 2rem 0;
-    }
+        <h3>Intermediate</h3>
+        <ul>
+          <li>Technical Indicators</li>
+          <li>Entry/Exit Rules</li>
+          <li>Chart Patterns</li>
+          <li>Risk-Reward Concepts</li>
+        </ul>
 
-    .hero-buttons {
-      margin: 1rem 0;
-    }
+        <h3>Advanced</h3>
+        <ul>
+          <li>Trading Psychology</li>
+          <li>Time Management</li>
+          <li>Money Management</li>
+          <li>Live Trading Strategies</li>
+        </ul>
+      </section>
 
-    .hero-buttons button {
-      padding: 10px 20px;
-      margin: 0 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #007bff;
-      color: white;
-      cursor: pointer;
-    }
-
-    .hero-buttons button:hover {
-      background-color: #0056b3;
-    }
-
-    .mentor-img {
-      display: block;
-      margin: 20px auto;
-      max-width: 180px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin-top: 3rem;
-      padding: 1rem;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>TeamX | PunitJakhar</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Courses</a>
-      <a href="#">Community</a>
-      <a href="#">Mentorship</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <div class="hero">
-      <h2>Trade Like a Yogi — Free from Fear, Greed, and Hope</h2>
-      <p>Master equity, commodities, forex, and options — with clarity, confidence, and real strategies.</p>
-      <div class="hero-buttons">
-        <button onclick="location.href='#'">Join Telegram</button>
-        <button onclick="location.href='#'">Start Learning</button>
-      </div>
-      <img src="/punit.jpg.jpeg" alt="Punit Jakhar" class="mentor-img" />
+      <footer style={{ textAlign: 'center', padding: '20px', fontSize: '14px', color: '#555' }}>
+        © 2025 TeamX by Punit Jakhar — All rights reserved.
+      </footer>
     </div>
-
-    <h2>Meet Your Mentor</h2>
-    <p>I'm <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience. I help aspiring traders master mindset, structure, and clarity — not just strategies.</p>
-
-    <h2>What You’ll Learn</h2>
-
-    <h3>Beginner</h3>
-    <ul>
-      <li>Candlestick Basics</li>
-      <li>Chart Types</li>
-      <li>Trade Types</li>
-      <li>Risk Management</li>
-    </ul>
-
-    <h3>Intermediate</h3>
-    <ul>
-      <li>Technical Indicators</li>
-      <li>Entry/Exit Rules</li>
-      <li>Chart Patterns</li>
-      <li>Risk-Reward Concepts</li>
-    </ul>
-
-    <h3>Advanced</h3>
-    <ul>
-      <li>Trading Psychology</li>
-      <li>Time Management</li>
-      <li>Money Management</li>
-      <li>Live Trading Strategies</li>
-    </ul>
-  </div>
-
-  <footer>
-    © 2025 TeamX by Punit Jakhar — All rights reserved.
-  </footer>
-
-</body>
-</html>
+  );
+}
