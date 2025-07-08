@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; import Image from "next/image";
 
 export default function HomePage() { return ( <div className="min-h-screen bg-gray-50"> {/* Header */} <header className="bg-blue-900 text-white py-4 px-6 shadow"> <div className="container mx-auto flex justify-between items-center"> <h1 className="text-2xl font-bold">TeamX | PunitJakhar</h1> <nav className="space-x-4 text-blue-200"> <a href="#home" className="hover:text-white">Home</a> <a href="#courses" className="hover:text-white">Courses</a> <a href="#community" className="hover:text-white">Community</a> <a href="#mentorship" className="hover:text-white">Mentorship</a> <a href="#contact" className="hover:text-white">Contact</a> </nav> </div> </header>
 
@@ -7,10 +7,12 @@ export default function HomePage() { return ( <div className="min-h-screen bg-gr
     <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-10">
       {/* Photo Section */}
       <div className="mb-6 md:mb-0 md:w-1/2 flex justify-center">
-        <img 
-          src="/your-photo.jpg" 
+        <Image 
+          src="/punit.jpg.jpeg" 
           alt="Punit Jakhar" 
-          className="rounded-lg shadow-md w-72 h-auto object-cover"
+          width={288}
+          height={400}
+          className="rounded-lg shadow-md object-cover"
         />
       </div>
 
