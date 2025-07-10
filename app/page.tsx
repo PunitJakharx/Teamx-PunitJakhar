@@ -1,21 +1,6 @@
-// pages/index.tsx
 import Image from 'next/image';
 
 export default function Home() {
-  const buttonStyle = (bg: string) => ({
-    padding: '12px 24px',
-    margin: '0 10px',
-    backgroundColor: bg,
-    color: 'white',
-    border: 'none',
-    borderRadius: '6px',
-    cursor: 'pointer',
-    transition: 'background 0.3s ease',
-    textDecoration: 'none',
-    fontWeight: '500',
-    display: 'inline-block'
-  });
-
   return (
     <div style={{ fontFamily: 'Segoe UI, sans-serif', backgroundColor: '#f4f6f8', color: '#333' }}>
       {/* Header */}
@@ -57,7 +42,7 @@ export default function Home() {
           color: '#003366',
           fontWeight: '700'
         }}>
-          Trade Like a Yogi — Free from Fear, Greed, and Hope
+          🧘‍♂️ Trade Like a Yogi — Free from Fear, Greed, and Hope
         </h2>
         <p style={{
           maxWidth: '650px',
@@ -70,29 +55,31 @@ export default function Home() {
         </p>
 
         <div style={{ marginBottom: '30px' }}>
-          <a
-            href="https://t.me/yourtelegramlink"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={buttonStyle('#007bff')}
-          >
-            Join Telegram
+          <a href="https://t.me/yourtelegram" target="_blank" rel="noreferrer">
+            <button style={{
+              padding: '12px 24px',
+              margin: '0 10px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '6px',
+              cursor: 'pointer'
+            }}>
+              🚀 Join Telegram
+            </button>
           </a>
-          <a
-            href="https://youtube.com/@5_star_trader?si=qbxWCday2vY_WHqO"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={buttonStyle('#FF0000')}
-          >
-            Visit YouTube
-          </a>
-          <a
-            href="https://www.instagram.com/__punit_jakhar?igsh=YXJnNGw3MnY5cHp1"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={buttonStyle('#E1306C')}
-          >
-            Follow on Instagram
+          <a href="https://youtube.com/@5_star_trader?si=qbxWCday2vY_WHqO" target="_blank" rel="noreferrer">
+            <button style={{
+              padding: '12px 24px',
+              margin: '0 10px',
+              backgroundColor: '#28a745',
+              color: 'white',
+              border: 'none',
+              borderRadius: '6px',
+              cursor: 'pointer'
+            }}>
+              🎓 Start Learning
+            </button>
           </a>
         </div>
 
@@ -104,8 +91,7 @@ export default function Home() {
             height={300}
             style={{
               borderRadius: '12px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              maxWidth: '100%'
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
             }}
           />
         </div>
@@ -120,7 +106,7 @@ export default function Home() {
         borderRadius: '12px',
         boxShadow: '0 0 10px rgba(0,0,0,0.1)'
       }}>
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>Meet Your Mentor</h2>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>💼 Meet Your Mentor</h2>
         <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
           I'm <strong>Punit Jakhar</strong>, a full-time trader with 5+ years of experience.
           I help aspiring traders master mindset, structure, and clarity — not just strategies.
@@ -136,20 +122,20 @@ export default function Home() {
         borderRadius: '12px',
         boxShadow: '0 0 10px rgba(0,0,0,0.05)'
       }}>
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>What You’ll Learn</h2>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>📚 What You’ll Learn</h2>
 
         {[
           {
-            level: 'Beginner',
-            items: ['Candlestick Basics', 'Chart Types', 'Trade Types', 'Risk Management']
+            level: '🟢 Beginner',
+            items: ['✅ Candlestick Basics', '📊 Chart Types', '📈 Trade Types', '🛡️ Risk Management']
           },
           {
-            level: 'Intermediate',
-            items: ['Technical Indicators', 'Entry/Exit Rules', 'Chart Patterns', 'Risk-Reward Concepts']
+            level: '🔵 Intermediate',
+            items: ['📉 Technical Indicators', '🚀 Entry/Exit Rules', '📐 Chart Patterns', '⚖️ Risk-Reward Concepts']
           },
           {
-            level: 'Advanced',
-            items: ['Trading Psychology', 'Time Management', 'Money Management', 'Live Trading Strategies']
+            level: '🔴 Advanced',
+            items: ['🧠 Trading Psychology', '⏱️ Time Management', '💰 Money Management', '🎯 Live Trading Strategies']
           }
         ].map((section) => (
           <div key={section.level} style={{ marginBottom: '20px' }}>
@@ -170,7 +156,9 @@ export default function Home() {
         backgroundColor: '#f0f0f0',
         marginTop: '50px'
       }}>
-        © {new Date().getFullYear()} TeamX by Punit Jakhar — All rights reserved.
+        © {new Date().getFullYear()} TeamX by Punit Jakhar — All rights reserved. <br />
+        📺 <a href="https://youtube.com/@5_star_trader" target="_blank" rel="noreferrer">YouTube</a> |  
+        📸 <a href="https://www.instagram.com/__punit_jakhar" target="_blank" rel="noreferrer">Instagram</a>
       </footer>
     </div>
   );
