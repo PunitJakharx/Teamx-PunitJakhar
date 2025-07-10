@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 export default function Home() {
-  const buttonStyle = (bg: string, hover: string) => ({
+  const buttonStyle = (bg: string) => ({
     padding: '12px 24px',
     margin: '0 10px',
     backgroundColor: bg,
@@ -74,7 +74,7 @@ export default function Home() {
             href="https://t.me/yourtelegramlink"
             target="_blank"
             rel="noopener noreferrer"
-            style={buttonStyle('#007bff', '#0056b3')}
+            style={buttonStyle('#007bff')}
           >
             Join Telegram
           </a>
@@ -82,15 +82,17 @@ export default function Home() {
             href="https://youtube.com/@5_star_trader?si=qbxWCday2vY_WHqO"
             target="_blank"
             rel="noopener noreferrer"
-            style={buttonStyle('#FF0000', '#cc0000')}
+            style={buttonStyle('#FF0000')}
           >
             Visit YouTube
           </a>
           <a
-            href="#"
-            style={buttonStyle('#28a745', '#1c7430')}
+            href="https://www.instagram.com/__punit_jakhar?igsh=YXJnNGw3MnY5cHp1"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={buttonStyle('#E1306C')}
           >
-            Start Learning
+            Follow on Instagram
           </a>
         </div>
 
