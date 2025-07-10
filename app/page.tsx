@@ -1,6 +1,20 @@
 import Image from 'next/image';
+import React from 'react';
 
 export default function Home() {
+  const buttonStyle = (baseColor: string): React.CSSProperties => ({
+    padding: '12px 24px',
+    margin: '0 10px',
+    backgroundColor: baseColor,
+    color: 'white',
+    border: 'none',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    transition: '0.3s',
+    fontWeight: 600,
+    fontSize: '16px'
+  });
+
   return (
     <div style={{ fontFamily: 'Segoe UI, sans-serif', backgroundColor: '#f4f6f8', color: '#333' }}>
       {/* Header */}
@@ -22,11 +36,8 @@ export default function Home() {
                 color: '#00cfff',
                 margin: '0 15px',
                 textDecoration: 'none',
-                fontWeight: '500',
-                transition: 'color 0.3s ease'
+                fontWeight: '500'
               }}
-              onMouseOver={(e) => e.currentTarget.style.color = '#ffffff'}
-              onMouseOut={(e) => e.currentTarget.style.color = '#00cfff'}
             >
               {item}
             </a>
@@ -34,7 +45,7 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section style={{
         textAlign: 'center',
         padding: '60px 20px',
@@ -55,10 +66,10 @@ export default function Home() {
 
         <div style={{ marginBottom: '30px' }}>
           <a href="https://t.me/yourtelegram" target="_blank" rel="noreferrer">
-            <button style={buttonStyle('#007bff', '#0056b3')}>🚀 Join Telegram</button>
+            <button style={buttonStyle('#007bff')}>🚀 Join Telegram</button>
           </a>
           <a href="https://youtube.com/@5_star_trader?si=qbxWCday2vY_WHqO" target="_blank" rel="noreferrer">
-            <button style={buttonStyle('#28a745', '#1c7430')}>🎓 Start Learning</button>
+            <button style={buttonStyle('#28a745')}>🎓 Start Learning</button>
           </a>
         </div>
 
@@ -71,10 +82,8 @@ export default function Home() {
             style={{
               borderRadius: '14px',
               boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
-              transition: 'transform 0.3s ease',
+              maxWidth: '90%'
             }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-            onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
           />
         </div>
       </section>
@@ -106,11 +115,8 @@ export default function Home() {
               padding: '20px',
               background: '#fff',
               borderRadius: '10px',
-              boxShadow: '0 3px 10px rgba(0,0,0,0.05)',
-              transition: 'transform 0.3s ease'
+              boxShadow: '0 3px 10px rgba(0,0,0,0.05)'
             }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
             <h3 style={{ color: '#0056b3' }}>{section.level}</h3>
             <ul>
@@ -139,23 +145,6 @@ export default function Home() {
   );
 }
 
-// Button Styling Reusable Function
-function buttonStyle(baseColor: string, hoverColor: string): React.CSSProperties {
-  return {
-    padding: '12px 24px',
-    margin: '0 10px',
-    backgroundColor: baseColor,
-    color: 'white',
-    border: 'none',
-    borderRadius: '6px',
-    cursor: 'pointer',
-    transition: 'background 0.3s ease',
-    fontWeight: '600',
-    fontSize: '16px'
-  };
-}
-
-// Card Layout
 const cardStyle: React.CSSProperties = {
   maxWidth: '900px',
   margin: '30px auto',
